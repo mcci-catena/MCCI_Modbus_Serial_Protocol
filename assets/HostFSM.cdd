@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<c:Diagram
+xmlns:c="http://www.cadifra.com/schema/1.0"
+xmlns:c1v3="http://www.cadifra.com/schema/1.3"
+ProductVersion="1.3.3">
+
+<Page id="r1"
+Size="1"
+Width="21590"
+Height="27940"
+Landscape="1"
+Rows="1"
+Columns="1"
+Margins="1016 1016 1016 1016"
+CutGlueMargins="1016 1016 1016 1016"
+Scale="1"/>
+
+<DiagramType id="r2"
+TypeValue="5"/>
+
+<Style id="r3">
+<dir n="Base" Typeface="arial" Size="11" Bold="0">
+<dir n="Free Text" Size="10" Bold="0"/>
+<dir n="State Diagram">
+<dir n="State" Bold="0">
+<dir n="Compartment" Size="8"/>
+<dir n="Header" Bold="1"/>
+</dir>
+<dir n="Transition" Bold="0"/>
+</dir>
+</dir>
+<c1v3:ElementStyle Name="MetaState" FillColor="0xFFFFC8"/>
+<c1v3:ElementStyle Name="State" FillColor="0xFFFFFF"/>
+</Style>
+
+<InitialState id="r7"
+Pos="12700 -200"/>
+
+<Transition id="r8">
+<End id="r9"
+Pos="12600 -8600"
+State="r4"
+Type="1"/>
+<Segment id="r10"
+Oblique="1">
+<Anchor id="r12"
+Pos="12281.440443213296 -8766.2049861495834">
+<FreeText id="r13"
+Pos="11592 -8765"
+Origin="2">
+<Text>pollTimer</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r41"
+Pos="10300 -9800"
+State="r5"
+Type="2"/>
+</Transition>
+
+<Transition id="r11">
+<End id="r15"
+Pos="12900 -600"
+State="r7"
+Type="1"/>
+<Segment id="r24"/>
+<End id="r25"
+Pos="12900 -2700"
+State="r67"
+Type="2"/>
+</Transition>
+
+<Transition id="r14">
+<End id="r26"
+Pos="9200 -10100"
+State="r5"
+Type="1"/>
+<Segment id="r16"/>
+<Join id="r17"
+Pos="8200 -10100"/>
+<Segment id="r18">
+<Anchor id="r22"
+Pos="8200 -8300">
+<FreeText id="r23"
+Pos="7440 -8746"
+Origin="3">
+<Text>! moreRxChars &amp;&amp;<p/>
+ !outputAvail</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<Join id="r19"
+Pos="8200 -7200"/>
+<Segment id="r20"/>
+<End id="r21"
+Pos="12000 -7200"
+State="r4"
+Type="2"/>
+</Transition>
+
+<Transition id="r28">
+<End id="r33"
+Pos="9800 -10800"
+State="r5"
+Type="1"/>
+<Segment id="r29"/>
+<Join id="r27"
+Pos="9800 -11800"/>
+<Segment id="r30">
+<Anchor id="r50"
+Pos="10400 -11800">
+<FreeText id="r51"
+Pos="8100 -12300"
+Origin="1">
+<Text>complete &amp;&amp;<p/>
+moreRxChars &amp;&amp; !outputAvail</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<Join id="r31"
+Pos="10600 -11800"/>
+<Segment id="r32"/>
+<End id="r34"
+Pos="10600 -10800"
+State="r5"
+Type="2"/>
+</Transition>
+
+<Transition id="r35">
+<End id="r36"
+Pos="15000 -10200"
+State="r6"
+Type="1"/>
+<Segment id="r37">
+<Anchor id="r39"
+Pos="12400 -10200">
+<FreeText id="r40"
+Pos="12300 -10100"
+Origin="4">
+<Text>pollTimer</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r38"
+Pos="11200 -10200"
+State="r5"
+Type="2"/>
+</Transition>
+
+<Transition id="r42">
+<End id="r43"
+Pos="13800 -8600"
+State="r4"
+Type="1"/>
+<Segment id="r44"
+Oblique="1">
+<Anchor id="r46"
+Pos="14527.808219178081 -9015.8904109589039">
+<FreeText id="r47"
+Pos="15028 -9116"
+Origin="4">
+<Text>outputAvail</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r45"
+Pos="15900 -9800"
+State="r6"
+Type="2"/>
+</Transition>
+
+<Transition id="r48">
+<End id="r49"
+Pos="17000 -10300"
+State="r6"
+Type="1"/>
+<Segment id="r52">
+<Anchor id="r61"
+Pos="18000 -10300">
+<FreeText id="r62"
+Pos="17200 -10554"
+Origin="1">
+<Text>complete &amp;&amp; <p/>
+! pollTimer</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<Join id="r53"
+Pos="18500 -10300"/>
+<Segment id="r54"/>
+<Join id="r55"
+Pos="18500 -7200"/>
+<Segment id="r59"/>
+<End id="r60"
+Pos="14000 -7200"
+State="r4"
+Type="2"/>
+</Transition>
+
+<Transition id="r56">
+<End id="r57"
+Pos="11200 -10500"
+State="r5"
+Type="1"/>
+<Segment id="r58">
+<Anchor id="r64"
+Pos="15000 -10500">
+<FreeText id="r65"
+Pos="14300 -10600"
+Origin="2">
+<Text>complete &amp;&amp;<p/>
+outputAvail</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r63"
+Pos="15000 -10500"
+State="r6"
+Type="2"/>
+</Transition>
+
+<Transition id="r69">
+<End id="r70"
+Pos="12900 -4900"
+State="r67"
+Type="1"/>
+<Segment id="r71">
+<Anchor id="r73"
+Pos="12900 -5300">
+<FreeText id="r74"
+Pos="13000 -5400"
+Origin="1">
+<Text>Complete &amp;&amp; no error</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r72"
+Pos="12900 -6700"
+State="r4"
+Type="2"/>
+</Transition>
+
+<Transition id="r77">
+<End id="r78"
+Pos="14000 -4300"
+State="r67"
+Type="1"/>
+<Segment id="r79">
+<Anchor id="r81"
+Pos="14800 -4300">
+<FreeText id="r82"
+Pos="15119 -4454"
+Origin="2">
+<Text>error</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r80"
+Pos="16100 -4300"
+State="r75"
+Type="2"/>
+</Transition>
+
+<Transition id="r83">
+<End id="r84"
+Pos="16100 -3500"
+State="r75"
+Type="1"/>
+<Segment id="r85">
+<Anchor id="r87"
+Pos="14900 -3500">
+<FreeText id="r88"
+Pos="14500 -3300"
+Origin="4">
+<Text>timeout</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r86"
+Pos="14000 -3500"
+State="r67"
+Type="2"/>
+</Transition>
+
+<State id="r89"
+Pos="3600 -6100"
+Size="18600 7700"
+Large="1"
+c1v3:ElementStyle="MetaState">
+<Text>Operating</Text>
+<State id="r4"
+Pos="12000 -6700"
+Size="2000 1900"
+c1v3:ElementStyle="State">
+<Text>stIdle</Text>
+<Compartment id="r66"
+Pos="12000 -7700"
+Size="2000 900">
+<Text>Start pollTimer</Text>
+</Compartment>
+</State>
+<State id="r5"
+Pos="9200 -9800"
+Size="2000 1000"
+c1v3:ElementStyle="State">
+<Text>stRead</Text>
+</State>
+<State id="r6"
+Pos="15000 -9800"
+Size="2000 1000"
+c1v3:ElementStyle="State">
+<Text>stWrite</Text>
+</State>
+</State>
+
+<FinalState id="r90"
+Pos="12600 -15500"/>
+
+<Transition id="r91">
+<End id="r92"
+Pos="12900 -13800"
+State="r89"
+Type="1"/>
+<Segment id="r93">
+<Anchor id="r95"
+Pos="12900 -14500">
+<FreeText id="r96"
+Pos="13100 -14500"
+Origin="1">
+<Text>stop</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<End id="r94"
+Pos="12900 -15500"
+State="r90"
+Type="2"/>
+</Transition>
+
+<Transition id="r97">
+<End id="r98"
+Pos="20000 -6100"
+State="r89"
+Type="1"/>
+<Segment id="r99">
+<Anchor id="r105"
+Pos="20000 -4500">
+<FreeText id="r106"
+Pos="20100 -5300"
+Origin="1">
+<Text>noDevice</Text>
+</FreeText>
+</Anchor>
+</Segment>
+<Join id="r100"
+Pos="20000 -2100"/>
+<Segment id="r101"/>
+<Join id="r102"
+Pos="17600 -2100"/>
+<Segment id="r103"/>
+<End id="r104"
+Pos="17600 -2700"
+State="r75"
+Type="2"/>
+</Transition>
+
+<State id="r107"
+Pos="3600 -1500"
+Size="18600 3600"
+Large="1"
+c1v3:ElementStyle="MetaState">
+<Text>Discovering</Text>
+<State id="r67"
+Pos="12000 -2700"
+Size="2000 2200"
+c1v3:ElementStyle="State">
+<Text>stConfig</Text>
+<Compartment id="r68"
+Pos="12000 -3700"
+Size="2000 1200">
+<Text>Write baud rate</Text>
+</Compartment>
+</State>
+<State id="r75"
+Pos="16100 -2700"
+Size="2900 2200"
+c1v3:ElementStyle="State">
+<Text>stAwaitDevice</Text>
+<Compartment id="r76"
+Pos="16100 -3700"
+Size="2900 1200">
+<Text>start sleep timer</Text>
+</Compartment>
+</State>
+</State>
+
+<Transition id="r108">
+<End id="r109"
+Pos="22200 -3300"
+State="r107"
+Type="1"/>
+<Segment id="r110"/>
+<Join id="r111"
+Pos="22700 -3300"/>
+<Segment id="r112"/>
+<Join id="r113"
+Pos="22700 -15800"/>
+<Segment id="r114"/>
+<End id="r115"
+Pos="13200 -15800"
+State="r90"
+Type="2"/>
+</Transition>
+
+</c:Diagram>
