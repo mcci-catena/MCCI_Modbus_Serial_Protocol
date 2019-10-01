@@ -38,6 +38,8 @@ This library contains the protocol definitions for the MCCI Modbus Serial Protoc
 		- [`stRead`](#stread)
 		- [`stWrite`](#stwrite)
 - [Library Usage](#library-usage)
+- [Meta](#meta)
+	- [Trademarks and copyright](#trademarks-and-copyright)
 
 <!-- /TOC -->
 <!-- markdownlint-restore -->
@@ -206,3 +208,11 @@ Otherwise go to `stIdle`.
 ```c++
 #include <MCCI_Modbus_Serial_Protocol.h>
 ```
+
+## Meta
+
+### Trademarks and copyright
+
+MCCI and MCCI Catena are registered trademarks of MCCI Corporation. LoRa is a registered trademark of Semtech Corporation. LoRaWAN is a registered trademark of the LoRa Alliance.
+
+This document and the contents of this repository are copyright 2019, [MCCI Corporation](https://mcci.com).

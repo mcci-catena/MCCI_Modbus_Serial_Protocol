@@ -116,9 +116,9 @@ public:
     /// @brief status register bits
     class StatusBits
         {
-    private:
+    protected:
         /// @brief the input available count, expressed in chars.
-        static constexpr std::uint16_t kInputAvail  = std::uint16_t(0x007f);
+        static constexpr std::uint16_t kRxAvail  = std::uint16_t(0x007f);
         /// @brief
         static constexpr std::uint16_t kTxEmpty     = std::uint16_t(0x0080);
         /// @brief mask for the output available count, expressed in chars.
@@ -135,8 +135,9 @@ public:
         /// @brief extract a bit field, normalized with LSB in bit zero.
         static constexpr std::uint16_t getField(std::uint16_t fieldMask, std::uint16_t v)
             {
-            return v / getLsb(fieldMask);
+            return (v & fieldMask) / getLsb(fieldMask);
             }
+
 
         /// @brief insert a bit field.
         /// @param fieldMask defines the bit field.
@@ -162,6 +163,16 @@ public:
             return (nChars >> 1) + (nChars & 1);
             }
 
+        /// @brief given number of bytes, return starting register
+        static constexpr Register getTxBaseReg(std::uint16_t nToSend)
+            {
+            return Register(
+                    std::uint16_t(Register::TxDataByte_u16) 
+                        - nCharsToRegs(nToSend)
+                        + (nToSend & 1)
+                        );
+            }
+
     public:
         /// @brief constructor: takes a value for the bit image
         StatusBits(std::uint16_t v = 0)
@@ -175,7 +186,7 @@ public:
 
         /// return number of available characters
         inline std::uint16_t getInputAvail() const
-            { return getField(kInputAvail, this->m_bits); }
+            { return getField(kRxAvail, this->m_bits); }
 
         /// return number of registers to read based on available characters.
         std::uint16_t getRegsToReadForInput() const
@@ -184,7 +195,7 @@ public:
         /// replace input-avail field with nAvail.
         inline StatusBits setInputAvail(std::uint8_t nAvail)
             {
-            return setField(kInputAvail, nAvail);
+            return setField(kRxAvail, nAvail);
             }
 
         /// return true if the transmitter is empty
@@ -213,15 +224,10 @@ public:
             if (nToWrite < nToSend)
                 nToSend = nToWrite;
 
-            // compute the register count; might be zero.
+            // compute the resulting register info.
+            baseReg = this->getTxBaseReg(nToSend);
             regCount = this->nCharsToRegs(nToSend);
 
-            // compute the starting register
-            std::uint16_t baseRegNum = std::uint16_t(Register::TxDataLast_u16) - regCount;
-            if (regCount & 1)
-                ++baseRegNum;
-
-            baseReg = Register(baseRegNum);
             return nToSend;
             }
 
